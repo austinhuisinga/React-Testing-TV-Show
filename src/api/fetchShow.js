@@ -1,0 +1,19 @@
+import axios from 'axios';
+
+export const fetchShow = () => {
+  return axios.get('https://api.tvmaze.com/singlesearch/shows?q=stranger-things&embed=episodes')
+    .then(res => res)
+};
+
+// export const fetchShow = props => {
+//   axios
+//     .get(
+//       "https://api.tvmaze.com/singlesearch/shows?q=stranger-things&embed=episodes"
+//     )
+//     .then(res => {
+//       props.setShow(res.data);
+//       props.setSeasons(props.formatSeasons(res.data._embedded.episodes));
+//     });
+// };
+
+
